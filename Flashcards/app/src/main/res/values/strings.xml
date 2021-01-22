@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Flashcards</string>
+    <string name="correct">Correct</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="output_correct"> You are Correct</string>
+    <string name="output_incorrect">You are Incorrect</string>
+    <string name="Next">Next</string>
+    <string name="question_1">The programme language python is named after monty python and the flying circus.</string>
+    <string name="question_2">The cd command changes the current disk inserted.  </string>
+    <string name="question_3">A computer can directly understand a high-level language</string>
+    <string name="question_4">You should always use strings instead of hardcoding text</string>
+    <string name="skip">Skip</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="title_activity_home">Home</string>
+    <string name="question_1_flash2">The acronym cd-rom stands for Compact disc read only memory.</string>
+    <string name="question_2_flash2">The term for all kinds of harmful software is called virus.  </string>
+    <string name="question_3_flash2">The Cpu controls all of the compjters fuctions</string>
+    <string name="question_4_flash2">You should always hardcode instead of strings for text </string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="to_computing_flash_card">To computing flash card</string>
+    <string name="go_to_flash_card_computing_set_2">go to flash card computing set 2</string>
+    <string name="flashcards">Flashcards</string>
+    <string name="congratuations_you_won_would_you_like_to_try_again">Congratuations you won would you like to try again?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="you_lost_would_you_like_to_try_again">You lost would you like to try again?</string>
+    <string name="a_quick_a_easy_way_to_remember_for_a_upcoming_test_click_on_the_following_options_to_go_to_the_quiz_try_to_reach_the_score_to_win_but_be_carefull_miss_to_many_quesions_and_your_lose">A quick a easy way to remember for a upcoming test click on the following options to go to the quiz try to reach the score to win but be carefull miss to many quesions and your lose</string>
+    <string name="flash_card_computing_set_2">Flash card computing set 2</string>
+    <string name="computing_flash_card">Computing flash card</string>
+    <string name="go_to_random_selection">Go to random selection</string>
+
+
+</resources>
