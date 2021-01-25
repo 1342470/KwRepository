@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView questions_view;
     private TextView score_counter;
 
+     /**
+     * instance variables used to set various scores and method values.
+     */
     int score = 0;
     int numOfQuesses = 3;
     int CurrentListNum = 0;
@@ -20,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //create a arrary with all of the questions to be inside
+    /**creates a array with all of the questions to be inside
+     */
     private QuestionsItem[] Qlist = new QuestionsItem[]{
             new QuestionsItem(R.string.question_1, true),
             new QuestionsItem(R.string.question_2, false),
@@ -38,11 +42,14 @@ public class MainActivity extends AppCompatActivity {
         showguesses();
         gotToHome();
         showskips();
-        // set questions view to match the textview with the id of questions
+        /** set questions view to match the textview with the id of questions
+        */
         questions_view = findViewById(R.id.questions);
-        //set created buttons to their respective id's
+        /** set created buttons to their respective id's
+        */
         Button correct_button = findViewById(R.id.correct_button);
-        //set onclicklistener to check if the buttons id matches the answer
+        /**set onclicklistener to check if the buttons id matches the answer
+        */
         correct_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*
+        /**
         sets button to the id of the next button in the xml
         then sets onclick so when the button is pressed currenetlistnum has a value of one added it its self
         once the value has been added it will run the change question function that the change the output the match the new value of currentlistnum
@@ -79,16 +86,16 @@ public class MainActivity extends AppCompatActivity {
 
         changeQuestion();
     }
-    //create method to switch to the next question
+      /**create method to switch to the next question
+     */
     private void changeQuestion() {
         int question = Qlist[CurrentListNum].setText();
         questions_view.setText(question);
     }
 
-    //shows the current score
 
     /**
-     *
+     *shows the current score
      */
 
     private void setscore(){
@@ -96,20 +103,23 @@ public class MainActivity extends AppCompatActivity {
         score_counter.setText(String.valueOf("Current score" + " " + score));
     }
 
-    //shows current amount of guesses
+       /**shows current amount of guesses
+     */
     private void showguesses(){
         score_counter = findViewById(R.id.Guesses);
         score_counter.setText(String.valueOf("Guesses left" + " " + numOfQuesses));
     }
 
-    //shows how many skips the user can use
+     /**shows how many skips the user can use
+     */
     private void showskips(){
         score_counter = findViewById(R.id.Skips);
         score_counter.setText(String.valueOf("Skips left" + " " + skips));
     }
 
 
-    //methord that if the number of guesses reachs 0 skip to the next question then set the number of quesses back to the orginal amout
+     /**method that if the number of guesses reaches 0 skip to the next question then set the number of queses back to the ordinal amount
+     */
     private void countdown(){
         if(numOfQuesses == 0) {
             CurrentListNum = (CurrentListNum + 1) % Qlist.length;
@@ -120,21 +130,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //methord that defines the winning condition if the score reaches 10 the app will take the user to the win page
+     /**method that defines the winning condition if the score reaches 10 the app will take the user to the win page
+     */
     private void wincon() {
         if (score == 10) {
             startActivity(new Intent(MainActivity.this, Win.class));
         }
     }
 
-    //methord that defines the winning condition if the score reaches 10 the app will take the user to the losse page
+     /**method that defines the winning condition if the score reaches 10 the app will take the user to the lose page
+     */
     private void losecon() {
         if (score == -10) {
             startActivity(new Intent(MainActivity.this, Lose.class));
         }
     }
 
-    //methord at takes the user make to the home page once clicked
+    /**method at takes the user make to the home page once clicked
+     */
     private void gotToHome() {
         Button Back_to_home = findViewById(R.id.Back_to_home);
         Back_to_home.setOnClickListener(new View.OnClickListener() {
@@ -145,7 +158,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //method that defines the amount of skips a user has once skips = 0 the skip button will not work
+    /**method that defines the amount of skips a user has once skips = 0 the skip button will not work
+     */
     private void skipsleft(){
         if (skips == 0){
             Button next_button = findViewById(R.id.next);
@@ -163,12 +177,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * methord that checks to see if the id of the button clicked matches the answer depend on the answer a toast
+  
+     * @param clicked   * methord that checks to see if the id of the button clicked matches the answer depend on the answer a toast
      *     stating their answer will be printed out and a score will be taken or added depending on if the answer matches
      *     if the anwer is correct the users number of guesses will go back to 3 and finaly it will run the wincon
      *     function to check if the users score matches the win conditon the same apilys to the incorret answer
      *     other than it will run the losecon funcion instead.
-     * @param clicked
      */
     private void checkAnswer(boolean clicked){
         boolean correct = Qlist[CurrentListNum].checkAnswer();
