@@ -20,7 +20,9 @@ public class Home extends AppCompatActivity {
 
     }
 
-
+    /**
+     * when clicked the programme will take the user to first set of questions
+     */
     private void gotoflash1() {
         Button goto_flash1 = findViewById(R.id.Go_To_Flash1);
         goto_flash1.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +34,9 @@ public class Home extends AppCompatActivity {
 
 }
 
-
+        /**
+     * when clicked the programme will take the user to second set of questions
+     */
     private void gotoflash2() {
         Button goto_flash2 = findViewById(R.id.Go_To_Flash_set_2);
         goto_flash2.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +47,9 @@ public class Home extends AppCompatActivity {
         });
     }
 
+        /**
+     * when clicked the programme will take the user to a set of questions which have a random order
+     */
     private void gotorandom() {
         Button goto_flash2 = findViewById(R.id.RandomB);
         goto_flash2.setOnClickListener(new View.OnClickListener() {
