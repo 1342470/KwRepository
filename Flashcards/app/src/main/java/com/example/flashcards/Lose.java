@@ -18,7 +18,11 @@ public class Lose extends AppCompatActivity {
 
 
     }
-
+    
+    
+    /**
+     * if the id corresponding to no is click it will take the user back to the home activity
+     */
     private void gotToHome() {
         Button No = findViewById(R.id.no_Button);
         No.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +32,10 @@ public class Lose extends AppCompatActivity {
             }
         });
     }
+    
+     /**
+     * if the id corresponding to yes is clicked itr will take the user back to the home activity
+     */
 
     private void StartOver() {
         Button Yes = findViewById(R.id.yes_Button);
