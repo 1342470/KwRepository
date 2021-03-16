@@ -1,0 +1,118 @@
+body{
+	font-family: "ff-meta-web-pro", sans-serif;
+    font-size: 100%;
+	line-height: 26px;
+	background: #373432;
+	background-size: 60%;
+	color: #E74B19;
+	text-decoration:none;
+
+}
+
+table{
+	display:Inline;
+	
+}
+
+
+img{
+    width:100%;
+    max-width:500px;
+}
+
+a:link{ 
+	color:white;
+}
+
+a:visited{
+	color:#969191;
+}
+
+a:hover{
+	color:#3b2b7f
+}
+	
+
+
+nav:last-child {
+	border-right: none;
+}
+
+nav a {
+	display: inline;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+	background-color: #111;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+	
+
+
+
+h1{
+	text-align:center;
+
+}
+
+
+	
+li{
+	list-style-type: none;
+
+}
+
+h2.Homepage{
+	text-align:center;
+}
+
+nav{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	text-align: center;
+	background-color: #F4C24D;
+	font-family: arial;
+	color: #7b899e;
+	text-align: center;
+	
+  }
+	
+
+
+header{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+footer{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}	
+
+
+	
+#SKIPLINKHOME{
+	text-align:center;
+
+}
+
+img.homeimage{
+	width:100%;
+    max-width:500px;
+	
+}
